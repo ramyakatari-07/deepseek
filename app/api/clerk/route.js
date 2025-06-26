@@ -14,7 +14,7 @@ export async function POST(req){
         "svix-signature": headerPayload.get("svix-signature"),
     };
     const payload=await req.json();
-    const body=JSON.stringift(payload);
+    const body=JSON.stringify(payload);
     const {data, type} =wh.verify(body,svixHeaders)
 
     const userData={
